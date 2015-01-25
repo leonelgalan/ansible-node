@@ -1,4 +1,4 @@
-# leonelgalan.node
+# leonelgalan.node [![Build Status](https://travis-ci.org/leonelgalan/ansible-node.svg)](https://travis-ci.org/leonelgalan/ansible-node)
 
 Installs nodejs and the **latest** npm.
 
