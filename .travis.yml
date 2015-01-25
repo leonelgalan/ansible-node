@@ -8,5 +8,6 @@ install:
   - pip install ansible
 script:
   - echo localhost > inventory
+  - ansible-galaxy install --role-file=requirements.yml --force
   - ansible-playbook --syntax-check -i inventory site.yml
   - ansible-playbook -i inventory site.yml --connection=local --sudo
