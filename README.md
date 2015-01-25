@@ -27,7 +27,7 @@ roles:
   - role: leonelgalan.node
   npm_packages:
     - gulp
-    ```
+```
 
 ## Vagrant
 
