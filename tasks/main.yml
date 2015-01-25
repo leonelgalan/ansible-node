@@ -1,0 +1,20 @@
+---
+- name: Check if npm 2.x is installed on the system.
+  shell: $SHELL -lc "npm -v | grep -e '^2\.'"
+  register: npm_installed
+  changed_when: false
+  ignore_errors: yes
+  tags:
+    - npm
+
+- name: Install npm
+  shell: $SHELL -lc "curl -L https://npmjs.com/install.sh | sh"
+  when: npm_installed|failed
+  tags:
+    - npm
+
+- name: Install npm_packages
+  npm: name={{ item }} global=yes
+  with_items: npm_packages
+  tags:
+    - npm
