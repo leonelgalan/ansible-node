@@ -7,6 +7,9 @@
   tags:
     - npm
 
+- name: Install curl
+  apt: name=curl state=present
+
 - name: Install npm
   shell: $SHELL -lc "curl -L https://npmjs.com/install.sh | sh"
   when: npm_installed|failed
