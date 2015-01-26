@@ -1,6 +1,9 @@
 # leonelgalan.node [![Build Status](https://travis-ci.org/leonelgalan/ansible-node.svg)](https://travis-ci.org/leonelgalan/ansible-node)
 
-Installs nodejs and the **latest** npm.
+Installs Node.js, the **latest** npm, and desired packages. At the time of writing (January 26, 2015):
+
+* Node.js v0.10.35
+* npm 2.3.0
 
 # Role Variables
 

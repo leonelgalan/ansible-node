@@ -13,7 +13,7 @@
   tags:
     - npm
 
-- name: Install npm_packages
+- name: Install global npm_packages
   npm: name={{ item }} global=yes
   with_items: npm_packages
   tags:
