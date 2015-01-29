@@ -4,8 +4,8 @@ galaxy_info:
   description: "Installs nodejs and the **latest** npm (https://github.com/npm/npm#fancy-install-unix)"
   company: Smashing Boxes
   license: MIT
-  min_ansible_version: 1.2
-  version: 0.1.1
+  min_ansible_version: 1.8
+  version: 0.2
 
   platforms:
   - name: Ubuntu

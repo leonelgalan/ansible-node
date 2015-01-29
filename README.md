@@ -29,7 +29,10 @@ ansible-galaxy install --role-file=requirements.yml --force
 roles:
   - role: leonelgalan.node
   npm_packages:
-    - gulp
+    - name: gulp
+    - name: bower
+      version: 1.3.12
+    - path: ../local/package
 ```
 
 ## Vagrant
