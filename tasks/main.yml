@@ -5,8 +5,8 @@
     - node
 
 - name: Check if npm 2.x is installed on the system.
-  shell: $SHELL -lc "npm -v | grep -e '^2\.'"
-  register: npm_installed
+  shell: npm -v
+  register: npm_version
   changed_when: false
   ignore_errors: yes
   tags:
@@ -14,10 +14,11 @@
 
 - name: Install curl
   apt: name=curl state=present
+  when: npm_version.stdout | version_compare('2', '<')
 
 - name: Install npm
   shell: $SHELL -lc "curl -L https://npmjs.com/install.sh | sh"
-  when: npm_installed|failed
+  when: npm_version.stdout | version_compare('2', '<')
   tags:
     - npm
 
