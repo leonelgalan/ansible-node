@@ -1,4 +1,9 @@
 ---
+- name: Ensure the latest node is installed
+  apt: name=nodejs state=latest
+  tags:
+    - node
+
 - name: Check if npm 2.x is installed on the system.
   shell: $SHELL -lc "npm -v | grep -e '^2\.'"
   register: npm_installed
